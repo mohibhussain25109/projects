@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<title>Sitora Booking</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="assets/css/book.css" />
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="assets/css/book2.css" />
+
+
+</head>
+<style>
+body{
+  background: url("assets/images/r7.webp") center/cover no-repeat;
+  }
+ 
+
+</style>
+<body>
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Make your reservation</h1>
+						</div>
+						<form method="post" action="book1.jsp">
+							<div class="form-group">
+								<input name="destination" class="form-control" type="text" placeholder="Country, ZIP, city..." >
+								<span class="form-label">Destination</span>	
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input name="checkin" class="form-control" type="date" required>
+										<span class="form-label">Check In</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input name="checkout" class="form-control" type="date" required>
+										<span class="form-label">Check out</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+											<input name="nroom" class="form-control" type="number" required placeholder="no. of rooms">
+										     
+										<span class="select-arrow"></span>
+										<span class="form-label">Rooms</span>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<input name="nadult" class="form-control" type="number" required placeholder="no. of adults">
+										   
+									  <span class="select-arrow"></span>
+										<span class="form-label">Adults</span>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<input name="nchild" class="form-control" type="number" required placeholder="no. of children">
+										 
+										<span class="select-arrow"></span>
+										<span class="form-label">Children</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input name="email" class="form-control" type="text" placeholder="Enter your Email">
+										<span class="form-label">Email</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input name="phone" class="form-control" type="text" placeholder="Enter you Phone">
+										<span class="form-label">Phone</span>
+									</div>
+								</div>
+							</div>
+						
+						<div class="form-btn">
+						<a href="payment.html"><input class="submit-btn" type="submit" value="BOOK"></a>
+							</div><br><br>
+						
+					
+						
+					  </form>
+					 </div>
+					
+
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$('.form-control').each(function () {
+			floatedLabel($(this));
+		});
+
+		$('.form-control').on('input', function () {
+			floatedLabel($(this));
+		});
+
+		function floatedLabel(input) {
+			var $field = input.closest('.form-group');
+			if (input.val()) {
+				$field.addClass('input-not-empty');
+			} else {
+				$field.removeClass('input-not-empty');
+			}
+		}
+	</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+</body>
+
+</html>

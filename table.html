@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Reservation Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/table.css">
+    </head>
+	<style>
+	button{
+	width:50%;
+	height:40px;
+	color:white;
+	background:grey;
+	border-color:grey;
+	margin-left:100px;
+	cursor:pointer;}
+	</style>
+    <body>
+        
+        <section class = "banner">
+            <h2>BOOK YOUR TABLE</h2>
+            <div class = "card-container">
+                <div class ="card-img">
+                    <!-- image here -->
+                </div>
+
+                <div class = "card-content">
+                    <h3>Reservation</h3>
+                    <form method="post" action="table.jsp">
+                        <div class = "form-row">
+                           <input name="Day" class="form-control" type="text" placeholder="Day">
+
+                            <input name="Hour" class="form-control" type="text" placeholder="Hour">
+                        </div>
+
+                        <div class = "form-row">
+                            <input name="Fullname" type="text" placeholder="Full Name">
+                            <input name="Phoneno" type="text" placeholder="Phone Number">
+                        </div>
+
+                        <div class = "form-row">
+                            <input name="Nperson" type="number" placeholder="How Many Persons?" min="1">
+                           <a href="payment.html"><input type="submit" value="BOOK TABLE"></a>
+                        </div>
+                    
+					</form>
+						<a href="dining.html"><button class="">Exit</button></a>
+					
+                </div>
+            </div>
+        </section>
+        
+    </body>
+</html>

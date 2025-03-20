@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Sitora Rooms</title>
+  
+  <link href="vendor/bootstrap/css/bstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/font.css">
+  <link rel="stylesheet" href="assets/css/temp.css">
+  <link rel="stylesheet" href="assets/css/rb.css" >
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+
+</head>
+<style>
+.our{
+height:130px;}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #e82574;
+  --primary-color-dark: #bc1c5c;
+  --text-dark: #0c0a09;
+  --text-light: #78716c;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  
+}
+
+.section__subheader {
+  margin-bottom: 0.5rem;
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--text-dark);
+}
+
+.section__subheader::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translate(1rem, -50%);
+  height: 2px;
+  width: 4rem;
+  background-color: var(--primary-color);
+}
+
+.section__header {
+  max-width: 600px;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: var(--text-dark);
+}
+
+.section__description {
+  max-width: 600px;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  max-width: 120px;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  background-image: url("assets/images/he.jpg");
+
+background-position:center center ;
+}
+
+.header__container {
+  padding-block: 10rem 15rem;
+}
+
+.header__container p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: red;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.header__container h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 4.5rem;
+  color: red;
+  text-align: center;
+}
+
+.header__container h1 span {
+  color: var(--primary-color);
+}
+
+.booking__container {
+  padding-block: 0;
+}
+
+.booking__form {
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--white);
+  border-radius: 10px;
+  transform: translateY(-50%);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.about__container {
+  overflow: hidden;
+  display: grid;
+  gap: 100px;
+}
+
+.about__image img {
+  max-width: 450px;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.room__grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.room__card {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.room__card__image {
+  position: relative;
+  isolation: isolate;
+}
+
+.room__card__icons {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  z-index: 1;
+}
+
+.room__card__icons span {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 1.5rem;
+  background-color: var(--white);
+  border-radius: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+
+.room__card__details {
+  padding: 1rem;
+}
+
+.room__card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.room__card p {
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.room__card h5 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.room__card h5 span {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+.service {
+  background-image: url("assets/images/ser.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.service__container {
+  padding-block: 0;
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.service__content {
+  grid-column: 1/3;
+  padding: 2rem 4rem;
+  background-color: var(--white);
+}
+
+.service__list {
+  list-style: none;
+  margin-top: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.service__list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.service__list span {
+  padding: 5px 12px;
+  font-size: 1.75rem;
+  color: var(--text-dark);
+  background-color: var(--text-light);
+  border-radius: 100%;
+}
+
+.service__list li:nth-child(1) span {
+  color: #60a5fa;
+  background-color: #dbeafe;
+}
+
+.service__list li:nth-child(2) span {
+  color: #f472b6;
+  background-color: #fce7f3;
+}
+
+.service__list li:nth-child(3) span {
+  color: #c084fc;
+  background-color: #f3e8ff;
+}
+
+.service__list li:nth-child(4) span {
+  color: #fb7185;
+  background-color: #ffe4e6;
+}
+
+.banner__content {
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.banner__card {
+  text-align: center;
+  flex: 1 1 180px;
+}
+
+.banner__card h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.banner__card p {
+  color: var(--text-light);
+}
+
+.explore :is(.section__subheader, .section__header) {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.explore__bg {
+  margin-top: 4rem;
+  padding-block: 3rem;
+  display: grid;
+  grid-template-columns:
+    minmax(1rem, 1fr)
+    minmax(0, var(--max-width))
+    minmax(1rem, 1fr);
+  background-image: url("assets/images/ex.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.explore__content {
+  grid-column: 2/3;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.explore__content p {
+  margin-bottom: 0.5rem;
+}
+
+.explore__content h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: var(--text-dark);
+}
+
+.explore__content .btn {
+  color: var(--primary-color);
+  background-color: var(--white);
+  border: 1px solid var(--primary-color);
+}
+
+.explore__content .btn:hover {
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+
+
+@media (width > 576px) {
+  .room__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width > 768px) {
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .room__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .service__content {
+    grid-column: 2/3;
+  }
+}
+
+
+@media (width > 1024px) {
+  .room__grid {
+    gap: 2rem;
+  }
+}
+
+.services .box {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.5s;
+  padding: 20px;
+}
+
+.services {
+  position: relative;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.services .left {
+  padding: 30px 0;
+}
+
+.services .box {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.5s;
+  padding: 20px;
+}
+
+.services .box .text {
+  padding: 30px 0;
+  border: 1px dashed #fff;
+}
+
+.services i {
+  font-size: 50px;
+  color: #7fc142;
+  transition: 0.5s;
+}
+
+.services h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 20p;
+  transition: 0.5s;
+}
+
+.services img {
+  width: 100%;
+  height: 100%;
+}
+
+.services .box:hover {
+  background: #7fc142;
+  color: #fff;
+  cursor: pointer;
+}
+
+.services .box:hover i,
+.services .box:hover h3 {
+  color: #fff;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.flex_space {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+/*break */
+
+
+
+footer {
+    background: #222020;
+	}
+  
+  
+footer .grid {
+ grid-template-columns: repeat(5, 1fr);
+text-align:center;  
+}
+  
+footer .content .icon i {
+    margin-right: 20px;
+  }
+  
+footer .social i {
+    padding: 10px ;
+    background:white;
+	margin-left:10px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  
+footer .content {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+  
+  }
+
+
+.legal {
+  padding: 15px 0;
+  background: #f9f6f6c9;
+  color: #f2eded;
+  border-top: 1px solid rgba(8, 8, 8, 0.859);
+}
+  
+.title{
+font-family:voga;
+font-size:90px;
+font-weight:200px;
+height:100px;
+padding:100px 50px 50px 270px;
+}
+
+h2{
+color:white;
+ }  
+
+
+
+</style>
+<body>
+<!-- ***** Header Area Start ***** -->
+ <header class="header-area header-sticky">
+   <div class="container">
+       <div class="row">
+           <div class="col-12">
+               <nav class="main-nav">
+                  
+				  <!-- ***** Logo Start ***** -->
+                   <a href="home.html" class="logo">
+                    <img src="assets/images/sgh white.png" width="300px" height="100px">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                  
+				  <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="home.html">Home</a></li>
+                      <li><a href="room.html" class="active">Room & Resort</a></li>
+                      <li><a href="dining.html" >Dining</a></li>
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                      <li><a href="">Login</a></li>
+					            <li><a href="book.html"><i class="fa fa-calendar"></i>Booking</a></li>
+                  </ul>   
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+
+<section>
+  <!--******royal park hotel*******--->
+    <header class="header">
+      <div class="section__container header__container" id="home">
+        <p>Simple - Unique - Friendly</p>
+        <h1>Make Yourself At Home<br />In Our <span>Hotel</span>.</h1>
+      </div>
+    </header>
+
+<section class="section__container about__container" id="about">
+<p><P><P><P>    
+	  <div class="about__image">
+        <img src="assets/images/d13.jpg" alt="about">
+      </div>
+	  
+<section>
+    <div class="about__content">
+        <p class="section__subheader">ABOUT US</p>
+        <h2 class="section__header">The Best Holidays Start Here!</h2>
+        <p class="section__description">
+          Built on a vision of grandeur, Sitora Grand Hotels conjures a panoply 
+		  of superlative experiences that are envisioned to 
+		  indulge and forge unforgettable memories.
+        </p>   
+	</div>
+</section>	
+</section>
+
+<section class="our">
+</section>
+<section class="section__container room__container">
+      <p class="section__subheader">OUR HOTELS</p>
+      <h2 class="section__header">The Most Memorable Rest Time Starts Here.</h2>
+      <div class="room__grid">
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/images/t14.webp" alt="room" />
+          </div>
+          <div class="room__card__details">
+            <h4>Del Luna</h4>
+            <p>
+              Bask in luxury with breathtaking ocean views from your private suite.
+			hospitality meets stunning views and culinary delights, 
+			perfect for both leisure and business travelers.
+            </p>
+            <h5>Starting from <span>24999/- per night</span></h5><p><br>
+            <a href="book.html"><button class="btn">Book Now</button></a>
+          </div>
+        </div>
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/images/t15.webp" alt="room" />
+          </div>
+          <div class="room__card__details">
+            <h4>Executive Cityscape</h4>
+			<p>Here hospitality meets stunning views and 
+			culinary delights, perfect for both leisure and business travelers.
+            Experience urban elegance and modern comfort in the heart of the
+            city.
+            </p>
+            <h5>Starting from <span>13199/- per night</span></h5>
+            <a href="book.html"><button class="btn">Book Now</button></a>
+          </div>
+        </div>
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/images/t16.webp" alt="room" />
+          </div>
+          <div class="room__card__details">
+            <h4>Nesa Clan Palace</h4>
+            <p>
+            Live the royal fantasy in Jaipur's 
+			heritage gem-Nesa Clan and gracil Palace, 
+			Jaipur, where ornate architecture, Mughal gous hospitality 
+			transport you to the era of Maharajas and Maharanis</p>
+            <h5>Starting from <span>62499/- per night</span></h5>
+            <a href="book.html"><button class="btn">Book Now</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+<!---same section as above--->
+<section class="section__container room__container">
+      <div class="room__grid">
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/images/t2.webp" height="240px" alt="room" />
+          </div>
+          <div class="room__card__details">
+            <h4>St.James' Court</h4>
+            <p>
+              Immerse in London's history and style at St. James' Court,
+			  Sitora Grand, offerring a blend of victorian grandeur and contemporary luxury.</p>
+            <h5>Starting from <span>9999/- per night</span></h5>
+            <a href="book.html"><button class="btn">Book Now</button></a>
+          </div>
+        </div>
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/images/t4.webp" alt="room" />
+          </div>
+          <div class="room__card__details">
+            <h4>Sitora Lands End</h4>
+            <p>
+            Indulge in experinces overlooking the Arabian sea, where warm
+			hospitality meets stunning views and culinary delights, perfect for both leisure and business travelers.
+			</p>
+            <h5>Starting from <span>5199/- per night</span></h5>
+            <a href="book.html"><button class="btn">Book Now</button></a>
+          </div>
+        </div>
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/images/t3.webp" alt="room" />
+          </div>
+          <div class="room__card__details">
+            <h4>The Pierre</h4>
+            <p>
+            Experience timeless elegance at The Pierre, where Sitora's hospitality
+			 meets New York luxury, offering sophastication and classic charm.</p>
+            <h5>Starting from <span>20499/- per night</span></h5>
+            <a href="book.html"><button class="btn">Book Now</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+<section class="section__container room__container">
+      <div class="room__grid">
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/images/t5.webp" alt="room" />
+          </div>
+          <div class="room__card__details">
+            <h4>Sitora Bunkingham Gate Suites</h4>
+            <p>
+            Experience London living at its best with Sitora Bunkingham Gate,
+			 providing spacious suites, personalised services, and a central location.</p>
+            <h5>Starting from <span>14999/- per night</span></h5><br>
+            <a href="book.html"><button class="btn">Book Now</button></a>
+          </div>
+        </div>
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/images/t6.webp" alt="room" />
+          </div>
+          <div class="room__card__details">
+            <h4>Georgian Valley</h4>
+            <p>
+            Experience Georgian Valley at Sitora Grand, where Portugese architecture,
+			 historic charm and authentic Goan culture blend for a unique coastal getaway.</p>
+            <h5>Starting from <span>8199/- per night</span></h5>
+            <a href="book.html"><button class="btn">Book Now</button></a>
+          </div>
+        </div>
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/images/t7.webp" alt="room" />
+          </div>
+          <div class="room__card__details">
+            <h4>Dholakpur Palace</h4>
+            <p>
+            Experience grandeur at Dholakpur Palace, Jaipur, where centuries of 
+			history, majestic architecture, and 
+			royal quarters exude an unparalleled sense of regality and refinement.</p>
+            <h5>Starting from <span>20499/- per night</span></h5>
+            <a href="book.html"><button class="btn">Book Now</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+ <section class="section__container room__container">
+      <div class="room__grid">
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/images/t8.webp" alt="room" />
+          </div>
+          <div class="room__card__details">
+            <h4>Mona Lisa</h4>
+            <p>
+            Experience the heart of Bengaluru at Sitora Grand Mona Lisa, 
+			offering sophisticated urban living, 
+			fine dining, and personalized service in the city's prime location.</p>
+            <h5>Starting from <span>14999/- per night</span></h5>
+            <a href="book.html"><button class="btn">Book Now</button></a>
+          </div>
+        </div>
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/images/t9.webp" alt="room" />
+          </div>
+          <div class="room__card__details">
+            <h4>West End</h4>
+            <p>
+            Amidst lush gardens, the Taj West End is a sanctuary of 
+			elegance in Bengaluru, boasting a heritage walk, 
+			exquisite dining and an aura of timeless sophistication</p>
+            <h5>Starting from <span>13199/- per night</span></h5>
+            <a href="book.html"><button class="btn">Book Now</button></a>
+          </div>
+        </div>
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/images/t10.webp" alt="room" />
+          </div>
+          <div class="room__card__details">
+            <h4>Krystal Inn</h4>
+            <p>
+            Explore luxury and elegance at Krystal Inn, 
+			Hyderabad, where impeccable service, sumptuous dining, 
+			and opulent accommodations define your stay.</p>
+            <h5>Starting from <span>22499/- per night</span></h5>
+            <a href="book.html"><button class="btn">Book Now</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+ <section class="section__container room__container">
+      <div class="room__grid">
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/images/t12.webp" alt="room" />
+          </div>
+          <div class="room__card__details">
+            <h4>City Centre</h4>
+            <p>
+            Explore the dynamic hub of Gurugram with City Centre, 
+			offering contemporary design, 
+			exceptional dining, and convenient access to the city's attractions.</p>
+            <h5>Starting from <span>8999/- per night</span></h5>
+            <a href="book.html"><button class="btn">Book Now</button></a>
+          </div>
+        </div>
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/images/t11.webp" alt="room" />
+          </div>
+          <div class="room__card__details">
+            <h4>Falaknuma Palace</h4>
+            <p>
+            Perched atop a hill, this palace exudes Nizami grandeur, 
+			offering a glimpse into royal living with its 
+			stately rooms, heritage walks, and unmatched views of Hyderabad.</p>
+            <h5>Starting from <span>23199/- per night</span></h5>
+            <a href="book.html"><button class="btn">Book Now</button></a>
+          </div>
+        </div>
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/images/t13.webp" alt="room" />
+          </div>
+          <div class="room__card__details">
+            <h4>Sitora's Swarna</h4>
+            <p>
+            Experience Amritsar's rich heritage at Sitora's Swarna, 
+			offering luxurious comfort, authentic cuisine, 
+			and warm hospitality in the heart of the city.</p>
+            <h5>Starting from <span>22499/- per night</span></h5>
+            <a href="book.html"><button class="btn">Book Now</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+ <!--same sections for rooms end here-->
+ <section class="our">
+ </section>
+ <section class="service" id="service">
+      <div class="section__container service__container">
+        <div class="service__content">
+          <p class="section__subheader">SERVICES</p>
+          <h2 class="section__header">Strive Only For The Best.</h2>
+          <ul class="service__list">
+            <li>
+              <span><i class="ri-shield-star-line"></i></span>
+              High Class Security
+            </li>
+            <li>
+              <span><i class="ri-24-hours-line"></i></span>
+              24 Hours Room Service
+            </li>
+            <li>
+              <span><i class="ri-headphone-line"></i></span>
+              Conference Room
+            </li>
+            <li>
+              <span><i class="ri-map-2-line"></i></span>
+              Tourist Guide Support
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container banner__container">
+      <div class="banner__content">
+        <div class="banner__card">
+          <h4>25+</h4>
+          <p>Properties Available</p>
+        </div>
+        <div class="banner__card">
+          <h4>350K+</h4>
+          <p>Bookings Completed</p>
+        </div>
+        <div class="banner__card">
+          <h4>9500K+</h4>
+          <p>Happy Customers</p>
+        </div>
+      </div>
+    </section>
+<section class="our">
+</section>
+    <section class="explore" id="explore">
+      <p class="section__subheader">EXPLORE</p>
+      <h2 class="section__header">What's New Today.</h2>
+      <div class="explore__bg">
+        <div class="explore__content">
+          <p class="section__description" id="dateDisplay">
+		  hi
+		  <script language="javascript">
+	// Function to display the current date
+        function displayCurrentDate() {
+            // Create a new Date object
+            const currentDate = new Date();
+
+            // Format the date as a string (e.g., "October 5, 2023")
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = currentDate.toLocaleDateString('en-US', options);
+
+            // Display the formatted date in the div
+            document.getElementById('dateDisplay').innerText =formattedDate;
+        }
+
+        // Call the function to display the date when the page loads
+        displayCurrentDate();	  
+</script>
+</p>
+          <h4>Today's Menu Is Available In Our Hotel.</h4>
+          <a href="dining.html"><button class="btn">Continue</button></a>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+ </section>
+  
+<section class="our">
+</section>
+
+<section class="offer mtop" id="services">
+    <div class="container">
+      <div class="heading">
+        <h5>EXCLUSIVE OFFERS </h5>
+        <h3>You can get an exclusive offer </h3>
+      </div>
+
+      <div class="content grid2 mtop">
+        <div class="box flex">
+          <div class="left">
+            <img src="assets/images/d14.jpg" alt="">
+          </div>
+          <div class="right">
+            <h4>Queen's Suite</h4>
+            <div class="rate flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p> Indulge in moments of pure bliss with the one you hold dear
+			</p><h5>From 5000/- per night</h5>
+            <button class="flex1">
+             <a href="book.html"> <span>Book Now</span></a>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="box flex">
+          <div class="left">
+            <img src="assets/images/o2.jpg" alt="">
+          </div>
+          <div class="right">
+            <h4>King's Suite</h4>
+            <div class="rate flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p> Indulge in moments of pure bliss with the one you hold dear
+			</p><h5>From 5000/- per night</h5>
+            <button class="flex1">
+             <a href="book.html"> <span>Book Now</span></a>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="box flex">
+          <div class="left">
+            <img src="assets/images/r.jpg" alt="">
+          </div>
+          <div class="right">
+            <h4>Studio Room</h4>
+            <div class="rate flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p> Indulge in moments of pure bliss with the one you hold dear
+			</p><h5>From 5000/- per night</h5>
+            <button class="flex1">
+            <a href="book.html"><span>Book Now</span></a>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="box flex">
+          <div class="left">
+            <img src="assets/images/d155.jpg" alt="">
+          </div>
+          <div class="right">
+            <h4>Family Room</h4>
+            <div class="rate flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p> Indulge in moments of pure bliss with the one you hold dear
+			</p><h5>From 5000/- per night</h5>
+            <button class="flex1">
+             <a href="book.html"> <span>Book Now</span></a>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="box flex">
+          <div class="left">
+            <img src="assets/images/d16.jpg" alt="">
+          </div>
+          <div class="right">
+            <h4>Master Suite</h4>
+            <div class="rate flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p> Indulge in moments of pure bliss with the one you hold dear
+			</p><h5>From 5000/- per night</h5>
+            <button class="flex1">
+             <a href="book.html"> <span>Book Now</span></a>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="box flex">
+          <div class="left">
+            <img src="assets/images/d17.jpg" alt="">
+          </div>
+          <div class="right">
+            <h4>Executive Junior Suite</h4>
+            <div class="rate flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p> Indulge in moments of pure bliss with the one you hold dear
+			</P><h5>From 5000/- per night</h5>
+            <button class="flex1">
+             <a href="book.html"> <span>Book Now</span></a>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="box flex">
+          <div class="left">
+            <img src="assets/images/d18.jpg" alt="">
+          </div>
+          <div class="right">
+            <h4>Premium King Room</h4>
+            <div class="rate flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p> Indulge in moments of pure bliss with the one you hold dear
+			</p><h5>From 5000/- per night</h5>
+            <button class="flex1">
+              <a href="book.html"><span>Book Now</span></a>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="box flex">
+          <div class="left">
+            <img src="assets/images/d19.jpg" alt="">
+          </div>
+          <div class="right">
+            <h4>Deluxe Room</h4>
+            <div class="rate flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p> Indulge in moments of pure bliss with the one you hold dear</p>
+            <h5>From 5000/- per night</h5>
+            <button class="flex1">
+              <a href="book.html"><span>Book Now</span></a>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services top">
+    <div class="container">
+      <div class="heading">
+        
+        <h2>OUR SERVICES</h2>
+        <p>Indulge in moments of pure bliss with the one you hold dear</p>
+      </div>
+
+
+      <div class="content flex_space">
+        <div class="left grid2">
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-champagne-glasses"></i>
+              <h3>Delious Food</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-person-biking"></i>
+              <h3>Fintness</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-utensils"></i>
+              <h3>Inhouse Restaurant</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-spa"></i>
+              <h3>Beauty Spa</h3>
+            </div>
+          </div>
+        </div>
+		<p>
+        <div class="right">
+          <img src="assets/images/service.png" alt="">
+        </div>
+      </div>
+    </div>
+ </section>
+
+<footer>
+    <div class="content grid  top">
+        <div class="box">
+          
+          <div class="social flex">
+          <a href=""><li>  <i class="fab fa-twitter"></li></i></a>
+          <a href=""><li>  <i class="fab fa-instagram"></li></i></a>
+          <a href=""><li>  <i class="fab fa-youtube"></li></i></a>
+          <a href=""><li>  <i class="fab fa-facebook-f"></li></i></a>
+          </div>
+        </div>
+   
+		<section>
+		<h2>SERVICES</h2>
+		<p>RESTURANTS</p>  
+		<p>CAFE & BARISTA</p>  
+		<p>SWIMMING POOL</p>  
+		<p>SPA & GYM</p>  
+		<p>BARS & CLUBS</p>  
+		<p>24/7 HOUSEKEEPING</p>  
+		<p>PICK UP & DROP</p>  
+		</section>
+		   
+		<section>
+			<h2>QUICK LINKS</h2>
+			<p><a href="room.html">HOTELS</a></p>  
+			<p><a href="dining.html">DINING</a></p>  
+			<p><a href="about.html">ABOUT US</a></p>  
+			<p><a href="contact.html">HELP</a></p>  
+			<p><a href="contact.html">CAREER</a></p>  
+		</section>
+
+ 
+		<section>
+		<h2>POLICYS</h2>  
+		<p>TERMS OF SERVICES</p>  
+		<p>WORK WITH US</p>  
+		<p>ACCESSIBILITY</p>  
+		<p>PRIVACY POLICY</p>  
+		<p>PARTNERS</p>  
+		<p>CORPORATE</p>  
+		</section>
+ 
+ 
+		<section>
+		   <h2>CONTACT US </h2>
+		   <p>PHONE NUMBER</p>
+		   <p>092-532-5225 </p>
+		   <p>832-522-6784 </p>
+		   <p>930-583-1023</p>
+		   <p> </p><BR>
+		   <p>EMAIL</p>
+		   <p>customercareofsitora@gmail.com </p>
+		   <p>grabatable@gmail.com </p>
+		   <p>bookaroom@gmail.com </p>
+		   <p> </p>
+		</section>
+ 	</div>
+ </footer>
+
+   <div class="legal">
+    <p class="container">Copyright (c) 2025 Copyright Holder All Rights Reserved.</p>
+  </div>
+   <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
